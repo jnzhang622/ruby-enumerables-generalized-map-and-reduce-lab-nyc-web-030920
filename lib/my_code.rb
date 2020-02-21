@@ -7,19 +7,16 @@ def map(array)
   index += 1
 end
 result
+pp array 
+pp result
 end 
 
 def reduce(array,sv=nil)
-  if sv
-    sum = sv
-    i=0
-  else
-    sum = array[0]
-    i=1
-  end
-  while i < array.length
+
   sum = yield(sum,array[i])
   i += 1
 end
 sum
+pp array
+pp sum
 end
